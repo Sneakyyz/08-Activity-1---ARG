@@ -1,0 +1,33 @@
+John Mark Salac | BSIT 307
+
+//#1
+public interface Carnivore {
+    int pieces = 10;
+
+    void eatGrass();
+
+    default int chew() {
+        return 13;
+    }
+}
+
+//#2
+interface HasWings {
+    public int getNumberOfWings();
+}
+
+abstract class Insect implements HasWings {
+    public abstract int getNumberOfLegs();
+}
+
+public class Dragonfly extends Insect {
+    @Override
+    public int getNumberOfLegs() {
+        return 6;
+    }
+
+    @Override
+    public int getNumberOfWings() {
+        return 4;
+    }
+}
